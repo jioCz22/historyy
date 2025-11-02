@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cartita.css">
+</head>
+<body>
+  <div class="container">
+    <h2>
+      <span>Ti amuuuuuuuuu musho musho mushisisisisisimoooooo 😭🥺</span>
+      No tienes idea de cuánto te amooooo 😭💖 
+      ¡Te amuuu desde aquí hasta el infinito,<span> y si el infinito se acaba, sigo amándote más allá 🥺!</span> 
+      
+      Eres mi pensamiento favorito del día 💫
+      No importa lo que pase, ni las horas, ni los días… siempre, pero <span>siempreeee</span> te tengo presente 💕. 
+      Cada mensajito tuyo, cada palabra, cada mirada (aunque sea en mi imaginación 🙈) me hace sentir que mi corazón late más rápido 💓
+
+      Y es que omg 😭✨ no hay nadie como tú, nadie que me haga reír así 🤭, ni querer tanto así 😍
+
+      <span>Ti amuuu tanto</span> que si pudiera, te llenaría el mundo de corazoncitos 💗💗💗 
+      y escribiría en el cielo “TE AMOOOOOOOOOO 😭💖” con nubes de colores y abrazos infinitos 💫
+
+      Cada “musho” significa mil sentimientos, mil abrazos, mil “no te imaginas cuánto te quiero” 😭💕
+      Eres mi personita especial, mi motivación, <span>mi todo 💞💫</span>
+
+      Así que sí… te lo repito una y mil veces más:
+      💌 <span>TI AMUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU MUSHO MUSHO MUSHO MUSHISISISISISISISIMOOOOOOOOOOOOOO 😭💞💞💞</span>
+
+      Hoy cumplimos <span>1 añito de casados</span> 🥹💖 
+      Gracias, mi amor, por ser mi otra mitad, por hacerme la persona más feliz del mundo cada día. 
+      Eres mi todo y no puedo esperar para seguir construyendo nuestra vida juntos 💫💍 
+      <span>Te amoooooo inmensamente, mi amor eterno 💕✨</span>
+    </h2>
+  </div>
+
+      <a href="chat.html" class="back-btn">← Regresar al chat 💬</a>
+  <!-- corazones flotando -->
+  <script>
+    const createHeart = () => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    };
+    setInterval(createHeart, 800);
+  </script>
+</body>
+</html>

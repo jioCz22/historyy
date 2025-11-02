@@ -1,0 +1,106 @@
+/* =======================================================
+| 💞 PROMESAS / METAS (promesas.html)
+========================================================= */
+
+body.promesas {
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #2b0a1b, #4a1430, #6a2042);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 🩷 Título */
+.promesas h1 {
+  margin-top: 50px;
+  color: #ff8ccf;
+  text-align: center;
+  font-size: 2.3em;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 192, 203, 0.6);
+  animation: fadeInDown 1.3s ease;
+}
+
+/* 🌸 Lista de metas */
+.lista-metas {
+  max-width: 500px;
+  width: 90%;
+  margin: 30px auto;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 192, 203, 0.2);
+  border-radius: 20px;
+  padding: 25px;
+  list-style: none;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease;
+}
+
+/* 💗 Cada meta */
+.lista-metas li {
+  margin: 12px 0;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #ff79b0;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  animation: fadeItem 0.8s ease forwards;
+  opacity: 0;
+}
+
+.lista-metas li:nth-child(1) { animation-delay: 0.2s; }
+.lista-metas li:nth-child(2) { animation-delay: 0.4s; }
+.lista-metas li:nth-child(3) { animation-delay: 0.6s; }
+.lista-metas li:nth-child(4) { animation-delay: 0.8s; }
+.lista-metas li:nth-child(5) { animation-delay: 1.0s; }
+.lista-metas li:nth-child(6) { animation-delay: 1.2s; }
+.lista-metas li:nth-child(7) { animation-delay: 1.4s; }
+.lista-metas li:nth-child(8) { animation-delay: 1.6s; }
+.lista-metas li:nth-child(9) { animation-delay: 1.8s; }
+
+.lista-metas li:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 10px rgba(255, 150, 200, 0.4);
+}
+
+/* 🌷 Botón volver */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 24px;
+  background: linear-gradient(90deg, #ff6fb4, #ff92c9);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  box-shadow: 0 4px 10px rgba(255, 150, 200, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #ff92c9, #ff6fb4);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 150, 200, 0.4);
+}
+
+/* ✨ Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeItem {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

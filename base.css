@@ -1,0 +1,85 @@
+/* =======================================================
+| 🎨 VARIABLES Y ESTILOS BASE (Base para todos los HTML)
+========================================================= */
+
+:root {
+  /* Paleta de colores principal (Rosa y Vino Oscuro) */
+  --color-primary-dark: #1b0f15;
+  --color-secondary-dark: #2b1521;
+  --color-text-light: #f5e9ee;
+  --color-pink-soft: #ff8fb1;
+  --color-pink-light: #ffb6c9;
+  --color-pink-vibrant: #e91e63;
+  --color-pink-medium: #ff7eb3;
+  --color-chat-bg-day: #ffe4e1; 
+  --color-chat-bg-day-light: #fff0f5; 
+  --color-chat-text-dark: #333;
+}
+
+/* Base general */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+/* Título animado con brillo (Usado en timeline/index) */
+h1 {
+  font-size: 2.2em;
+  color: var(--color-pink-soft);
+  text-shadow: 0 0 10px var(--color-pink-soft), 0 0 20px var(--color-pink-light);
+  position: relative;
+  display: inline-block;
+  animation: floatGlow 2s ease-in-out infinite;
+}
+
+/* Botón base (usado para "Volver al chat" y "Hablar con el futuro") */
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  background: linear-gradient(135deg, var(--color-pink-vibrant), var(--color-pink-medium));
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 126, 179, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #ff4f94, var(--color-pink-vibrant));
+  box-shadow: 0 0 15px rgba(255, 143, 177, 0.6);
+}
+
+
+/* =======================================================
+| 💫 ANIMACIONES GENERALES
+========================================================= */
+
+/* Animación de Título (Subir/Bajar + Brillo) */
+@keyframes floatGlow {
+  0% { transform: translateY(0); text-shadow: 0 0 8px var(--color-pink-soft), 0 0 16px var(--color-pink-light); }
+  50% { transform: translateY(-10px); text-shadow: 0 0 15px var(--color-pink-soft), 0 0 30px var(--color-pink-light); }
+  100% { transform: translateY(0); text-shadow: 0 0 8px var(--color-pink-soft), 0 0 16px var(--color-pink-light); }
+}
+
+/* =======================================================
+| 📱 MEDIA QUERIES BASE
+========================================================= */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+}

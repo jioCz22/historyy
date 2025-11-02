@@ -1,0 +1,193 @@
+/* =======================================================
+| 💬 CHAT (Específico para chat.html)
+========================================================= */
+
+/* Fondo para el body del chat */
+body.chat {
+  padding: 0; 
+  background: linear-gradient(180deg, var(--color-chat-bg-day), var(--color-chat-bg-day-light));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 1s;
+}
+
+/* Botón de Metas/Promesas (Fijo) */
+.promesas-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background: linear-gradient(135deg, var(--color-pink-medium), var(--color-pink-vibrant));
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000; 
+  box-shadow: 0 0 10px rgba(255, 126, 179, 0.5);
+  transition: 0.3s;
+}
+
+.promesas-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 126, 179, 0.7);
+}
+
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 12px 18px;
+  border-radius: 20px;
+  max-width: 75%;
+  word-wrap: break-word;
+  animation: popIn 0.3s ease-out;
+  font-size: 15px;
+  line-height: 1.4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Burbujas */
+.message.user {
+  background: linear-gradient(135deg, var(--color-pink-vibrant), var(--color-pink-medium));
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 5px;
+}
+.message.bot {
+  background: linear-gradient(135deg, var(--color-text-light), #ffd6e8);
+  color: var(--color-chat-text-dark);
+  align-self: flex-start;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+}
+.message.mini-juego {
+  background: linear-gradient(135deg, var(--color-chat-bg-day), var(--color-pink-light));
+  color: var(--color-pink-vibrant);
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Input y botón de envío */
+.input-area {
+  display: flex;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+input {
+  flex: 1;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+}
+
+button {
+  background: linear-gradient(135deg, var(--color-pink-vibrant), var(--color-pink-medium));
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  animation: gradientShift 3s infinite alternate;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Animaciones de Chat */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes floatEmoji {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  50% { transform: translateY(-8px) scale(1.2); opacity: 0.8; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* Contenedores de Animación (Corazones/Confeti) */
+#confetti, #hearts {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Media Queries para Chat */
+@media (max-width: 768px) {
+  .chat-container {
+    height: 88vh;
+  }
+  input {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .chat-container {
+    height: 90vh;
+  }
+  .messages {
+    padding: 15px;
+  }
+  input {
+    font-size: 13px;
+  }
+}
+
+/* Botón de Cartita 💌 */
+.cartita-btn {
+  position: fixed;
+  top: 70px; /* Debajo del botón de Mis metas */
+  left: 15px;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(255, 182, 193, 0.5);
+  transition: 0.3s;
+}
+
+.cartita-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.7);
+}
